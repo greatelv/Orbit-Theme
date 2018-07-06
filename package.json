@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "<a href=\"http://themes.3rdwavemedia.com/website-templates/orbit-free-resume-cv-template-for-developers/\" target=\"_blank\"><img src=\"http://themes.3rdwavemedia.com/wp-content/uploads/2016/01/Responsive-HTML5-Resume-CV-Template-for-Developers.png\" alt=\"Responsive Resume/CV Template for Developers\" /></a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatelv/Orbit-Theme.git"
+  },
+  "author": "greatelv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greatelv/Orbit-Theme/issues"
+  },
+  "homepage": "https://github.com/greatelv/Orbit-Theme#readme",
+  "dependencies": {
+    "lite-server": "^2.4.0",
+    "vue": "^2.5.16"
+  }
+}
