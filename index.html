@@ -100,8 +100,9 @@
           <p>프로젝트 이름과 대략적인 내용과 사용한 기술을 나열했습니다.</p>
         </div><!--//intro-->
         <div class="item" v-for="project in projects">
-          <span class="project-title"><a :href="project.link">{{project.title}}</a></span> -
-          <span class="project-tagline">{{project.detail}}</span>
+          <span class="project-title"><a :href="project.link">{{project.title}}</a></span>
+          <span class="project-detail">{{project.detail}}</span>
+          <div class="project-skills">{{project.skills}}</div>
         </div><!--//item-->
       </section><!--//section-->
 

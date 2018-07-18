@@ -223,6 +223,17 @@ p {
   margin-top: 0;
   margin-bottom: 5px;
 }
+
+.main-wrapper .project-detail {
+  font-size: 12xpx;
+  color: #97AAC3;
+  margin-left: 3px;
+}
+
+.main-wrapper .project-skills {
+  font-size: 14px;
+}
+
 .main-wrapper .projects-section .intro {
   margin-bottom: 30px;
 }
