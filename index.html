@@ -94,18 +94,6 @@
         </div><!--//item-->
       </section><!--//section-->
 
-      <section class="section projects-section">
-        <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
-        <div class="intro">
-          <p>프로젝트 이름과 대략적인 내용과 사용한 기술을 나열했습니다.</p>
-        </div><!--//intro-->
-        <div class="item" v-for="project in projects">
-          <span class="project-title"><a :href="project.link">{{project.title}}</a></span>
-          <span class="project-detail">{{project.detail}}</span>
-          <div class="project-skills">{{project.skills}}</div>
-        </div><!--//item-->
-      </section><!--//section-->
-
       <section class="skills-section section">
         <h2 class="section-title"><i class="fa fa-rocket"></i>Skills</h2>
         <div class="skillset">
@@ -113,6 +101,25 @@
         </div>
       </section><!--//skills-section-->
 
+
+      <section class="section projects-section">
+        <h2 class="section-title"><i class="fa fa-archive"></i>Major Projects</h2>
+        <div class="item" v-for="project in projects">
+          <div class="meta">
+            <div class="upper-row">
+              <span class="project-title"><a :href="project.link">{{project.title}}</a></span>
+              <div class="time">{{project.time}}</div>
+            </div><!--//upper-row-->
+            <div class="summary">{{project.summary}}</div>
+          </div><!--//meta-->
+          <ul class="project-detail">
+            <li v-for="detail in project.details">{{detail}}</li>
+          </ul><!--//details-->
+        </div><!--//item-->
+        <div class="item etc-project">
+          <a class="btn btn-sm btn-default btn-block" :href="allProjectLink" target="_blank" onclick="this.blur();">All Project</a>
+        </div>
+      </section><!--//section-->
     </div><!--//main-body-->
   </div>
 
