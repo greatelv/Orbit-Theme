@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <title>Jay T</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JayT Resume">
+  <meta name="author" content="greatelv">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="wrapper" id="resume">
+    <div class="sidebar-wrapper">
+      <div class="profile-container">
+        <img class="profile" :src="profile.profilePhoto" alt=""/>
+        <h1 class="name">{{profile.name}}</h1>
+        <h3 class="tagline">{{profile.job}}</h3>
+      </div><!--//profile-container-->
+      <div class="contact-container container-block">
+        <ul class="list-unstyled contact-list">
+          <li class="email">
+            <i class="fa fa-envelope"></i><a :href="'mailto:'+profile.mail">{{profile.mail}}</a>
+          </li>
+          <li class="phone">
+            <i class="fa fa-phone"></i><a :href="'tel:'+profile.mobile">{{profile.mobile}}</a>
+          </li>
+          <li class="linkedin">
+            <i class="fa fa-linkedin"></i><a :href="'http://'+profile.linkedin" target="_blank">{{profile.linkedin}}</a>
+          </li>
+          <li class="github">
+            <i class="fa fa-github"></i><a :href="'http://'+profile.github" target="_blank">{{profile.github}}</a></li>
+          <li class="instagram">
+            <i class="fa fa-instagram"></i><a :href="'https://instagram.com/'+profile.instagram" target="_blank">{{profile.instagram}}</a>
+          </li>
+        </ul>
+      </div><!--//contact-container-->
+      <div class="education-container container-block">
+        <h2 class="container-block-title">Education</h2>
+        <div class="item" v-for="education in educations">
+          <h4 class="degree">{{education.degree}}</h4>
+          <h5 class="meta">{{education.school}}</h5>
+          <div class="time">{{education.time}}</div>
+        </div><!--//item-->
+      </div><!--//education-container-->
+
+      <div class="interests-container container-block">
+        <h2 class="container-block-title">Interests</h2>
+        <ul class="list-unstyled interests-list">
+          <li>Photo/Camera</li>
+          <li>Trip</li>
+          <li>Ramen</li>
+        </ul>
+      </div><!--//interests-->
+
+    </div><!--//sidebar-wrapper-->
+
+    <div class="main-wrapper">
+
+      <section class="section summary-section">
+        <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
+        <div class="summary">
+          <p v-html="careerSummary"></p>
+        </div><!--//summary-->
+      </section><!--//section-->
+
+      <section class="section experiences-section">
+        <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+        <div class="item" v-for="career in careers">
+          <div class="meta">
+            <div class="upper-row">
+              <h3 class="job-title">{{career.jobTitle}}</h3>
+              <div class="time">{{career.time}}</div>
+            </div><!--//upper-row-->
+            <div class="company">{{career.company}}</div>
+          </div><!--//meta-->
+          <div class="details" v-html="career.details"></div><!--//details-->
+        </div><!--//item-->
+      </section><!--//section-->
+
+      <section class="skills-section section">
+        <h2 class="section-title"><i class="fa fa-rocket"></i>Skills</h2>
+        <div class="skillset">
+          <span class="label label-default" v-for="skill in skills">{{skill}}</span>
+        </div>
+      </section><!--//skills-section-->
+
+
+      <section class="section projects-section">
+        <h2 class="section-title"><i class="fa fa-archive"></i>Major Projects</h2>
+        <div class="item" v-for="project in projects">
+          <div class="meta">
+            <div class="upper-row">
+              <span class="project-title"><a :href="project.link">{{project.title}}</a></span>
+              <div class="time">{{project.time}}</div>
+            </div><!--//upper-row-->
+            <div class="summary">{{project.summary}}</div>
+          </div><!--//meta-->
+          <ul class="project-detail">
+            <li v-for="detail in project.details">{{detail}}</li>
+          </ul><!--//details-->
+        </div><!--//item-->
+        <div class="item etc-project">
+          <a class="btn btn-sm btn-default btn-block" :href="allProjectLink" target="_blank" onclick="this.blur();">All Project</a>
+        </div>
+      </section><!--//section-->
+    </div><!--//main-body-->
+  </div>
+
+  <footer class="footer">
+    <div class="text-center">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+    </div><!--//container-->
+  </footer><!--//footer-->
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+  <script type="text/javascript" src="assets/js/min/main-min.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
