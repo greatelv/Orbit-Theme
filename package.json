@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sass ./assets/style/style.scss ./assets/style/style.css && lite-server",
-    "deploy": "cp -rfv ./assets index.html ./docs/"
+    "deploy": "cp -rfv ./assets index.html favicon.ico ./docs/"
   },
   "repository": {
     "type": "git",
