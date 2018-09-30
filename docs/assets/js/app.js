@@ -137,7 +137,7 @@ const projects = [
   },
 ];
 
-const allProjectLink = 'https://drive.google.com/open?id=1vysq1K3c1eYANBznP3qkxKuljgru6TkH';
+const allProjectLink = 'https://drive.google.com/open?id=1GwZKRf3TFaM1ec-inSuqWcKTEv3QVzPy';
 
 class Resume extends Vue {
   constructor () {
