@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server && sass --watch ./assets/style.scss ./assets/style.css"
+    "dev": "lite-server && sass --watch ./assets/style.scss ./assets/style.css",
+    "deploy": "cp -rfv ./assets index.html ./docs/"
   },
   "repository": {
     "type": "git",
